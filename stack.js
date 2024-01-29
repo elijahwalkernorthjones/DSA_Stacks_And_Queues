@@ -41,14 +41,20 @@ class Stack {
   /** peek(): return the value of the first node in the stack. */
 
   peek() {
-
+    if(!this.top){
+      throw new Error("Stack is empty")
+    }
+    return this.top.val;
   }
 
   /** isEmpty(): return true if the stack is empty, otherwise false */
 
   isEmpty() {
-
+    return this.size === 0;
   }
 }
 
 module.exports = Stack;
+
+
+//-----------------------------------------------------------
